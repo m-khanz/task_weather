@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_half">8dp</dimen>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="text_size">12sp</dimen>
+    <dimen name="text_size_headline">16sp</dimen>
+    <dimen name="text_size_temp">80sp</dimen>
+
+    <dimen name="app_bar_height">200dp</dimen>
+    <dimen name="image_size">80dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="card_radius">10dp</dimen>
+    <dimen name="size_zero">0dp</dimen>
+    <dimen name="weather_image_size">90dp</dimen>
+</resources>

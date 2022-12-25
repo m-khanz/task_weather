@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginVertical="@dimen/margin_half">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.momin.task.data.local.entity.DataEntity" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/parentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_small"
+        android:foreground="?attr/selectableItemBackground"
+        android:transitionName="weatherCardTransition"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="@dimen/card_elevation">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvCityName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_default"
+                android:layout_marginTop="@dimen/margin_default"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{data.city.name}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_headline"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvWeather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_default"
+                android:layout_marginTop="@dimen/margin_half"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCityName" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_default"
+                android:layout_marginVertical="@dimen/margin_half"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvWeather">
+
+                <ImageView
+                    android:id="@+id/ivWeather"
+                    android:layout_width="@dimen/size_zero"
+                    android:layout_height="@dimen/weather_image_size"
+                    android:layout_weight="30" />
+
+                <TextView
+                    android:id="@+id/tvCurrentTemp"
+                    android:layout_width="@dimen/size_zero"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/margin_default"
+                    android:layout_weight="32"
+                    android:gravity="center"
+                    android:text="@{String.valueOf(data.main.temp) + `°`}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_temp" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/size_zero"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/margin_default"
+                    android:layout_weight="25"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvMaxTemp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_zero"
+                        android:layout_weight="5"
+                        android:gravity="center_horizontal|bottom"
+                        android:text="@{String.valueOf(data.main.temp_max) + `°`}"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_headline"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMinTemp"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_zero"
+                        android:layout_weight="5"
+                        android:gravity="center_horizontal"
+                        android:text="@{String.valueOf(data.main.temp_min) + `°`}"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_headline" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

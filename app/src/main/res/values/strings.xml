@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Task</string>
+    <string name="city_name">City Name:</string>
+    <string name="temperature">Temperature:</string>
+    <string name="current_temp">Current Temp:</string>
+    <string name="weather">Weather:</string>
+    <string name="longitude">Longitude</string>
+    <string name="latitude">Latitude</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="search_city">Search City</string>
+    <string name="country">Country</string>
+    <string name="humidity">Humidity</string>
+    <string name="no_internet_connection">No Internet connection</string>
+    <string name="connected">Connected</string>
+</resources>
