@@ -10,6 +10,8 @@ For API calls **Retrofit** is used with custom **Interceptor** to unzip **.gz** 
 
 The app will show progress bar and take time only on the first launch of application to load data from remote server. Once it's downloaded, It will be stored locally for future use, and the recyclerview will be populated instantly without any delay on second launch of app.
 
+Also there are test cases written JUnit, and also Jacoco for test coverage.
+
 <br>
 <p align="center">
     <img src="screen1.png" width="180"/>
